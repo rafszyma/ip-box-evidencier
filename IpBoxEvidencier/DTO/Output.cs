@@ -6,11 +6,11 @@ public class Output
     
     public string Name { get; set; }
     
-    public string Expend { get; set; }
+    public double? Expend { get; set; }
     
-    public string IPExpend { get; set; }
+    public double? IPExpend { get; set; }
     
-    public string Income { get; set; }
+    public double? Income { get; set; }
     
-    public string IPIncome { get; set; }
+    public double? IPIncome { get; set; }
 }
