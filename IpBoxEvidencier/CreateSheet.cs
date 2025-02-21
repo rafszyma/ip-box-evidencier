@@ -29,7 +29,8 @@ public class CreateSheet
         }
         
         _workbook = new XLWorkbook();
-        _worksheet = _workbook.Worksheets.Add(DateTime.UtcNow.Year);
+        _worksheet = _workbook.Worksheets.Add();
+        _worksheet.Name = (DateTime.UtcNow.Year - 1).ToString();
     }
 
     public void CreateExcel(List<OutputMonth> months)
