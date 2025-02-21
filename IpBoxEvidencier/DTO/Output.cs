@@ -2,7 +2,7 @@
 
 public class Output
 {
-    private Entry Entry { get; set; }
+    public Entry Entry { get; set; }
     
     public string Name { get; set; }
     
