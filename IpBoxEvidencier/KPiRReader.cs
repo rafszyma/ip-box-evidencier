@@ -9,6 +9,12 @@ public class KPiRReader
 
     private const string Year = "2024";
 
+    private readonly Weighter _weighter;
+    public KPiRReader(Weighter weighter)
+    {
+        _weighter = weighter;
+    }
+
     public List<OutputMonth> Read()
     {
         var months = OutputMonth.Create();
@@ -64,7 +70,8 @@ public class KPiRReader
                 for (var i = 0; i < payload.Count; i = i + 2)
                 {
                     var entry = new Entry(payload[i], payload[i + 1]);
-                    month.Entries.Add(entry.ToOutput());
+                    var output = _weighter.Transform(entry);
+                    month.Entries.Add(output);
                 }
             }
         }

@@ -25,16 +25,6 @@ public class Entry
         SetValues(input[1]);
         
     }
-    
-    public Output ToOutput()
-    {
-        return new Output
-        {
-            Name = KPiRName,
-            Income = Income,
-            Expend = Expend
-        };
-    }
 
     private void SetName(string input)
     {

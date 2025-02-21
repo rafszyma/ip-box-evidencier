@@ -8,6 +8,7 @@ var services = new ServiceCollection();
 
 services.AddTransient<CreateSheet>();
 services.AddTransient<KPiRReader>();
+services.AddTransient<Weighter>();
 var provider = services.BuildServiceProvider();
 
 
@@ -19,4 +20,4 @@ var sheetCreator = provider.GetRequiredService<CreateSheet>();
 
 sheetCreator.CreateExcel(months);
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Im done!");
