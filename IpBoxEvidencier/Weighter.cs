@@ -13,6 +13,8 @@ public class Weight
     public double IpValue { get; set; }
     
     public double RegularValue { get; set; }
+    
+    public double MinValue { get; set; }
 }
 
 public class Weighter
@@ -26,14 +28,34 @@ public class Weighter
     private readonly Weight[] _weights;
     public Output Transform(Entry entry)
     {
-        var weight = _weights.FirstOrDefault(x =>
+        var weights = _weights.Where(x =>
             (x.Contains == null || entry.KPiRName.Contains(x.Contains, StringComparison.InvariantCultureIgnoreCase)) &&
             (x.NotContains == null || !entry.KPiRName.Contains(x.NotContains, StringComparison.InvariantCultureIgnoreCase))
-        );
+        ).ToList();
+        
+        
+        if (weights.Count() > 1)
+        {
+            // If more than 1 weight matches, filter by MinValue
+            var tempWeights = weights.Where(x => x.MinValue > 0 && entry.Income > x.MinValue).ToList();
+            if (tempWeights.Count == 0)
+            {
+                tempWeights = weights.Where(x => x.MinValue == 0).ToList();
+            }
 
+            weights = tempWeights;
+            
+            if (weights.Count > 1)
+            {
+                Console.WriteLine($"Multiple weights for entry: {entry.KPiRName} in {entry.Date}");
+                throw new ArgumentException();
+            }
+        }
+        
+        var weight = weights.SingleOrDefault();
         if (weight == null)
         {
-            Console.WriteLine($"No weight for entry: {entry.KPiRName}");
+            Console.WriteLine($"No weight for entry: {entry.KPiRName} in {entry.Date}");
             Console.ReadKey();
             return new Output();
         }
