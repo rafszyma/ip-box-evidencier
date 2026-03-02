@@ -1,0 +1,108 @@
+﻿[
+  {
+    "Name": "Przychod",
+    "Contains": "jit",
+    "NotContains": "BENEFITY",
+    "IpValue": 85,
+    "RegularValue": 15,
+    "MinValue": 10000
+  },
+  {
+    "Name": "Benefit JIT",
+    "Contains": "benefity",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Benefit JIT",
+    "Contains": "jit",
+    "NotContains": "BENEFITY",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "ORANGE",
+    "Contains": "orange",
+    "IpValue": 1,
+    "RegularValue": 0
+  },
+  {
+    "Name": "Samochód usługa",
+    "Contains": "holowanie",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Paliwo",
+    "Contains": "paliwo",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Księgowość",
+    "Contains": "delta consulting",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Amortyzacja",
+    "Contains": "Amortyzacja",
+    "IpValue": 1,
+    "RegularValue": 0
+  },
+  {
+    "Name": "FP",
+    "Contains": "FP",
+    "NotContains": "FUNDUSZ PRACY",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "FP",
+    "Contains": "FUNDUSZ PRACY",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Naprawa telefonu",
+    "Contains": "naprawa telefonu",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Remanent",
+    "Contains": "remanent",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Sprzęt",
+    "Contains": "x-kom",
+    "IpValue": 1,
+    "RegularValue": 0
+  },
+  {
+    "Name": "Samochód naprawa",
+    "Contains": "auto-gum",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Opony",
+    "Contains": "OPONEO",
+    "IpValue": 0,
+    "RegularValue": 1
+  },
+  {
+    "Name": "Oprogramowanie",
+    "Contains": "JetBrains",
+    "IpValue": 1,
+    "RegularValue": 0
+  },
+  {
+    "Name": "Kable",
+    "Contains": "TERG",
+    "IpValue": 1,
+    "RegularValue": 0
+  }
+]
